@@ -194,56 +194,167 @@
       line-height: 1.6;
     }
 
-    /* EXAMPLE */
-    .example-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 32px;
-      border: 1px solid var(--border);
-      max-width: 520px;
+    /* PHONE MOCKUP */
+    .phone-wrap {
       margin: 60px auto 0;
+      display: flex;
+      justify-content: center;
     }
-    .example-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--linen);
-      border-radius: 20px;
-      padding: 5px 12px;
-      font-size: 12px;
-      color: var(--brown-mid);
-      font-weight: 600;
-      margin-bottom: 14px;
+    .phone {
+      width: 280px;
+      background: #1a1a1a;
+      border-radius: 44px;
+      padding: 14px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.3);
+      position: relative;
     }
-    .example-challenge {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--text);
-      line-height: 1.3;
-      margin-bottom: 8px;
+    .phone-notch {
+      width: 90px;
+      height: 26px;
+      background: #1a1a1a;
+      border-radius: 0 0 18px 18px;
+      margin: 0 auto 0;
+      position: relative;
+      z-index: 2;
     }
-    .example-formula {
-      font-size: 13px;
-      color: var(--muted);
-      font-style: italic;
-      margin-bottom: 16px;
+    .phone-screen {
+      background: #FAF8F5;
+      border-radius: 32px;
+      overflow: hidden;
     }
-    .palette-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .palette-chip {
+    .phone-header {
+      background: #C9846A;
+      padding: 10px 14px;
       display: flex;
       align-items: center;
-      gap: 6px;
-      background: var(--cream);
-      border: 1px solid var(--border);
+      gap: 7px;
+    }
+    .phone-header-icon {
+      width: 14px; height: 14px;
+      fill: #FAF8F5;
+      flex-shrink: 0;
+    }
+    .phone-header-title {
+      font-size: 8px;
+      font-weight: 800;
+      color: #FAF8F5;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .phone-tabs {
+      display: flex;
+      background: #F2EAE0;
+      border-bottom: 1px solid #e0d5c8;
+    }
+    .phone-tab {
+      flex: 1;
+      text-align: center;
+      padding: 7px 4px;
+      font-size: 8px;
+      font-weight: 600;
+      color: #B89880;
+    }
+    .phone-tab.active {
+      color: #6B3A2A;
+      border-bottom: 2px solid #1a1a1a;
+    }
+    .phone-body {
+      padding: 12px;
+      background: #FAF8F5;
+    }
+    .phone-weather {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #F2EAE0;
       border-radius: 20px;
-      padding: 4px 10px;
-      font-size: 11px;
+      padding: 3px 9px;
+      font-size: 7px;
+      color: #9B5A45;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .phone-challenge-label {
+      font-size: 6px;
+      font-weight: 600;
+      color: #aaa;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .phone-challenge-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .phone-formula {
+      font-size: 7px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .phone-palette {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .phone-chip {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #fff;
+      border: 1px solid #e0dbd5;
+      border-radius: 20px;
+      padding: 3px 7px;
+      font-size: 6.5px;
       color: #555;
     }
-    .swatch {
-      width: 10px; height: 10px;
+    .phone-swatch {
+      width: 7px; height: 7px;
       border-radius: 50%;
       border: 0.5px solid rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .phone-look-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 6px;
+      border: 1px solid #f0ece7;
+    }
+    .phone-look-label {
+      font-size: 6px;
+      font-weight: 600;
+      color: #aaa;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .phone-look-item {
+      font-size: 7px;
+      color: #2a2a2a;
+      line-height: 1.8;
+      padding-left: 8px;
+      position: relative;
+    }
+    .phone-look-item::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #ccc;
+    }
+    .phone-mood {
+      font-size: 6.5px;
+      color: #888;
+      font-style: italic;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid #f0ece7;
+      line-height: 1.5;
     }
 
     /* CTA */
@@ -379,14 +490,41 @@
         </div>
       </div>
 
-      <div class="example-card">
-        <div class="example-pill">⚡ Today's challenge</div>
-        <div class="example-challenge">Tokyo Convenience Store at 2am, 1998</div>
-        <div class="example-formula">Oversized Tee + Cargo Skirt + Platform Sandal + Mini Bag + Silver Rings</div>
-        <div class="palette-row">
-          <div class="palette-chip"><div class="swatch" style="background:#E8E0D4"></div>Chalk</div>
-          <div class="palette-chip"><div class="swatch" style="background:#3D4A6B"></div>Midnight Navy</div>
-          <div class="palette-chip"><div class="swatch" style="background:#C4A882"></div>Warm Sand</div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <!-- Header -->
+            <div class="phone-header">
+              <svg class="phone-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5,15.5C17.5,16.6 16.6,17.5 15.5,17.5C14.4,17.5 13.5,16.6 13.5,15.5C13.5,14.4 14.4,13.5 15.5,13.5C16.6,13.5 17.5,14.4 17.5,15.5M10.5,13.5C9.4,13.5 8.5,14.4 8.5,15.5C8.5,16.6 9.4,17.5 10.5,17.5C11.6,17.5 12.5,16.6 12.5,15.5C12.5,14.4 11.6,13.5 10.5,13.5M22,14V11H20V9A2,2 0 0,0 18,7H13V5.73C13.6,5.39 14,4.74 14,4A2,2 0 0,0 12,2A2,2 0 0,0 10,4C10,4.74 10.4,5.39 11,5.73V7H6A2,2 0 0,0 4,9V11H2V14H4V18A2,2 0 0,0 6,20H18A2,2 0 0,0 20,18V14H22Z"/></svg>
+              <span class="phone-header-title">Fashion Bot</span>
+            </div>
+            <!-- Tabs -->
+            <div class="phone-tabs">
+              <div class="phone-tab">Today 1 Apr</div>
+              <div class="phone-tab active">Tomorrow 2 Apr</div>
+            </div>
+            <!-- Content -->
+            <div class="phone-body">
+              <div class="phone-weather">☀️ 18–26°C · Sunny</div>
+              <div class="phone-challenge-label">Style Challenge</div>
+              <div class="phone-challenge-name">Seoul Hongdae Record Shop, Saturday Afternoon, 2012</div>
+              <div class="phone-formula">Oversized Varsity + Satin Slip Skirt + Chunky Loafer + Mini Bag + Layered Necklaces</div>
+              <div class="phone-palette">
+                <div class="phone-chip"><div class="phone-swatch" style="background:#C94040"></div>Cherry Red</div>
+                <div class="phone-chip"><div class="phone-swatch" style="background:#F5ECD7"></div>Cream</div>
+                <div class="phone-chip"><div class="phone-swatch" style="background:#1A1A2E"></div>Ink Navy</div>
+              </div>
+              <div class="phone-look-card">
+                <div class="phone-look-label">Primary Look</div>
+                <div class="phone-look-item">Oversized varsity jacket (wool-blend, cherry red, ribbed cuffs)</div>
+                <div class="phone-look-item">Bias-cut satin slip skirt (cream, mid-thigh, barely-there fit)</div>
+                <div class="phone-look-item">Chunky leather loafers (black, square toe, lug sole)</div>
+                <div class="phone-look-item">Mini crescent bag (ink navy, gold chain strap)</div>
+                <div class="phone-look-item">Layered fine gold necklaces (mixed lengths, 3 chains)</div>
+                <div class="phone-mood">"She spent her rent money on vinyl and has absolutely no regrets."</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
