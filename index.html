@@ -160,21 +160,7 @@
     }
 
     /* HOW IT WORKS */
-    .how {
-      background: var(--linen);
-      padding: 80px 40px;
-    }
-    .how-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      margin-top: 48px;
-    }
-    .step { position: relative; }
+    .how { background: var(--linen); }
     .step-num {
       font-size: 11px;
       font-weight: 800;
@@ -194,51 +180,70 @@
       line-height: 1.6;
     }
 
-    /* PHONE MOCKUP */
-    .phone-wrap {
-      margin: 60px auto 0;
+    /* HOW IT WORKS — SPLIT LAYOUT */
+    .how-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .how-steps-col {}
+    .how-phone-col {
       display: flex;
       justify-content: center;
     }
+
+    /* PHONE MOCKUP */
     .phone {
-      width: 280px;
+      width: 260px;
       background: #1a1a1a;
       border-radius: 44px;
-      padding: 14px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.3);
-      position: relative;
-    }
-    .phone-notch {
-      width: 90px;
-      height: 26px;
-      background: #1a1a1a;
-      border-radius: 0 0 18px 18px;
-      margin: 0 auto 0;
-      position: relative;
-      z-index: 2;
+      padding: 12px;
+      box-shadow: 0 50px 100px rgba(0,0,0,0.22), 0 0 0 1px rgba(255,255,255,0.06);
     }
     .phone-screen {
       background: #FAF8F5;
-      border-radius: 32px;
+      border-radius: 34px;
       overflow: hidden;
+    }
+    .phone-statusbar {
+      background: #C9846A;
+      height: 36px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 16px 6px;
+      justify-content: space-between;
+    }
+    .phone-statusbar-time {
+      font-size: 9px;
+      font-weight: 700;
+      color: #FAF8F5;
+    }
+    .phone-statusbar-icons {
+      font-size: 8px;
+      color: #FAF8F5;
+      opacity: 0.8;
     }
     .phone-header {
       background: #C9846A;
-      padding: 10px 14px;
+      padding: 8px 14px 12px;
       display: flex;
       align-items: center;
       gap: 7px;
     }
     .phone-header-icon {
-      width: 14px; height: 14px;
+      width: 15px; height: 15px;
       fill: #FAF8F5;
       flex-shrink: 0;
     }
     .phone-header-title {
-      font-size: 8px;
+      font-size: 8.5px;
       font-weight: 800;
       color: #FAF8F5;
-      letter-spacing: 3px;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
     }
     .phone-tabs {
@@ -249,7 +254,7 @@
     .phone-tab {
       flex: 1;
       text-align: center;
-      padding: 7px 4px;
+      padding: 8px 4px;
       font-size: 8px;
       font-weight: 600;
       color: #B89880;
@@ -259,7 +264,7 @@
       border-bottom: 2px solid #1a1a1a;
     }
     .phone-body {
-      padding: 12px;
+      padding: 14px;
       background: #FAF8F5;
     }
     .phone-weather {
@@ -268,39 +273,39 @@
       gap: 4px;
       background: #F2EAE0;
       border-radius: 20px;
-      padding: 3px 9px;
-      font-size: 7px;
+      padding: 4px 10px;
+      font-size: 7.5px;
       color: #9B5A45;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .phone-challenge-label {
-      font-size: 6px;
+      font-size: 6.5px;
       font-weight: 600;
       color: #aaa;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
     .phone-challenge-name {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
       color: #1a1a1a;
       line-height: 1.3;
       margin-bottom: 6px;
     }
     .phone-formula {
-      font-size: 7px;
+      font-size: 7.5px;
       color: #888;
       font-style: italic;
-      margin-bottom: 10px;
-      line-height: 1.5;
+      margin-bottom: 12px;
+      line-height: 1.6;
     }
     .phone-palette {
       display: flex;
       gap: 5px;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .phone-chip {
       display: flex;
@@ -309,12 +314,12 @@
       background: #fff;
       border: 1px solid #e0dbd5;
       border-radius: 20px;
-      padding: 3px 7px;
-      font-size: 6.5px;
+      padding: 3px 8px;
+      font-size: 7px;
       color: #555;
     }
     .phone-swatch {
-      width: 7px; height: 7px;
+      width: 8px; height: 8px;
       border-radius: 50%;
       border: 0.5px solid rgba(0,0,0,0.1);
       flex-shrink: 0;
@@ -322,23 +327,22 @@
     .phone-look-card {
       background: #fff;
       border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 6px;
+      padding: 11px;
       border: 1px solid #f0ece7;
     }
     .phone-look-label {
-      font-size: 6px;
+      font-size: 6.5px;
       font-weight: 600;
       color: #aaa;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
     .phone-look-item {
-      font-size: 7px;
+      font-size: 7.5px;
       color: #2a2a2a;
-      line-height: 1.8;
-      padding-left: 8px;
+      line-height: 1.9;
+      padding-left: 9px;
       position: relative;
     }
     .phone-look-item::before {
@@ -348,13 +352,22 @@
       color: #ccc;
     }
     .phone-mood {
-      font-size: 6.5px;
+      font-size: 7px;
       color: #888;
       font-style: italic;
-      margin-top: 6px;
-      padding-top: 6px;
+      margin-top: 8px;
+      padding-top: 8px;
       border-top: 1px solid #f0ece7;
       line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+      .how-split {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 60px 24px;
+      }
+      .how-phone-col { order: -1; }
     }
 
     /* CTA */
@@ -468,42 +481,47 @@
 
   <!-- HOW IT WORKS -->
   <div class="how">
-    <div class="how-inner">
-      <p class="section-label">How it works</p>
-      <h2>Three steps to your best dressed day</h2>
+    <div class="how-split">
 
-      <div class="steps">
-        <div class="step">
-          <p class="step-num">01</p>
-          <h3>Set your style profile</h3>
-          <p>Tell Fashion Bot your city, style keywords, work days, and any personal style notes — items you avoid, colours you love, your vibe.</p>
-        </div>
-        <div class="step">
-          <p class="step-num">02</p>
-          <h3>Get your daily challenge</h3>
-          <p>Every day, AI generates a completely different style challenge — a new world, a new look, a new colour story — tailored to your day and your weather.</p>
-        </div>
-        <div class="step">
-          <p class="step-num">03</p>
-          <h3>Get dressed with confidence</h3>
-          <p>Two full outfits, specific items, styling tips, and a Pinterest mood board. Add the look to your calendar and go.</p>
+      <!-- Steps -->
+      <div class="how-steps-col">
+        <p class="section-label">How it works</p>
+        <h2 style="font-size:clamp(26px,4vw,38px);font-weight:800;color:#1a1a1a;line-height:1.2;margin-bottom:40px;">Three steps to your best dressed day</h2>
+        <div style="display:flex;flex-direction:column;gap:32px;">
+          <div class="step">
+            <p class="step-num">01</p>
+            <h3>Set your style profile</h3>
+            <p>Tell Fashion Bot your city, style keywords, work days, and any personal style notes — items you avoid, colours you love, your vibe.</p>
+          </div>
+          <div class="step">
+            <p class="step-num">02</p>
+            <h3>Get your daily challenge</h3>
+            <p>Every day, AI generates a completely different style challenge — a new world, a new look, a new colour story — tailored to your day and weather.</p>
+          </div>
+          <div class="step">
+            <p class="step-num">03</p>
+            <h3>Get dressed with confidence</h3>
+            <p>Two full outfits, specific items, styling tips, and a Pinterest mood board. Add the look to your calendar and go.</p>
+          </div>
         </div>
       </div>
 
-      <div class="phone-wrap">
+      <!-- Phone -->
+      <div class="how-phone-col">
         <div class="phone">
           <div class="phone-screen">
-            <!-- Header -->
+            <div class="phone-statusbar">
+              <span class="phone-statusbar-time">9:41</span>
+              <span class="phone-statusbar-icons">●●● ▲ 🔋</span>
+            </div>
             <div class="phone-header">
               <svg class="phone-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5,15.5C17.5,16.6 16.6,17.5 15.5,17.5C14.4,17.5 13.5,16.6 13.5,15.5C13.5,14.4 14.4,13.5 15.5,13.5C16.6,13.5 17.5,14.4 17.5,15.5M10.5,13.5C9.4,13.5 8.5,14.4 8.5,15.5C8.5,16.6 9.4,17.5 10.5,17.5C11.6,17.5 12.5,16.6 12.5,15.5C12.5,14.4 11.6,13.5 10.5,13.5M22,14V11H20V9A2,2 0 0,0 18,7H13V5.73C13.6,5.39 14,4.74 14,4A2,2 0 0,0 12,2A2,2 0 0,0 10,4C10,4.74 10.4,5.39 11,5.73V7H6A2,2 0 0,0 4,9V11H2V14H4V18A2,2 0 0,0 6,20H18A2,2 0 0,0 20,18V14H22Z"/></svg>
               <span class="phone-header-title">Fashion Bot</span>
             </div>
-            <!-- Tabs -->
             <div class="phone-tabs">
               <div class="phone-tab">Today 1 Apr</div>
               <div class="phone-tab active">Tomorrow 2 Apr</div>
             </div>
-            <!-- Content -->
             <div class="phone-body">
               <div class="phone-weather">☀️ 18–26°C · Sunny</div>
               <div class="phone-challenge-label">Style Challenge</div>
@@ -527,6 +545,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
