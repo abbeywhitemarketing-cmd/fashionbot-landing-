@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Fashion Bot</title>
+  <meta name="description" content="Get help with Fashion Bot — your daily AI-powered outfit recommendation app." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --terracotta: #C9846A;
+      --terracotta-dark: #A8623F;
+      --cream: #FAF8F5;
+      --linen: #F2EAE0;
+      --border: #E0D5C8;
+      --brown-dark: #6B3A2A;
+      --brown-mid: #9B5A45;
+      --text: #1a1a1a;
+      --muted: #888;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--terracotta);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    nav a { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+    .nav-icon { display: flex; align-items: center; height: 36px; width: 36px; }
+    .nav-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--cream);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--terracotta);
+      padding: 60px 40px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50px;
+      background: var(--cream);
+      border-radius: 50% 50% 0 0 / 30px 30px 0 0;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      color: var(--cream);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 40px 80px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+      margin-top: 48px;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+    }
+    .faq-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-card {
+      background: var(--linen);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .contact-card p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: var(--cream);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+    .contact-btn:hover { background: var(--terracotta-dark); }
+
+    /* FOOTER */
+    footer {
+      background: var(--text);
+      padding: 32px 40px;
+      text-align: center;
+      color: #666;
+      font-size: 13px;
+    }
+    footer a { color: var(--terracotta); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 48px 24px 64px; }
+      .content { padding: 48px 24px 64px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">
+      <img class="nav-icon" src="../mobile/assets/Logos/Logo Round.png" alt="Fashion Bot logo" />
+      <span class="nav-title">Fashion Bot</span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Support</h1>
+    <p>Got a question or need help? We're here for it.</p>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <p class="section-label">Common questions</p>
+    <h2>FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h3>How does Fashion Bot generate my outfits?</h3>
+        <p>Fashion Bot uses AI to create a daily outfit recommendation tailored to your style profile, the weather in your city, and the events on your calendar. Every day brings a different style challenge — a new world, a new look, a new colour story.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I connect my Google Calendar?</h3>
+        <p>Go to Settings in the app and tap "Connect Google Calendar". You'll be taken through a secure sign-in flow. Once connected, Fashion Bot will read your upcoming events to tailor your outfit to your day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I change my style preferences?</h3>
+        <p>Tap the settings icon in the top right of the home screen. From there you can update your city, style keywords, work days, and any special instructions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I regenerate my outfit?</h3>
+        <p>Yes — pull down to refresh on the home screen to generate a new outfit for that day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I turn off daily notifications?</h3>
+        <p>Go to Settings and toggle off "Daily reminder". You can also change the reminder time from the same screen.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I view past outfits?</h3>
+        <p>Tap "See outfit history" at the bottom of the home screen to browse the last 14 days of outfit challenges. You can export any outfit using the share button.</p>
+      </div>
+    </div>
+
+    <h2>Contact us</h2>
+    <div class="contact-card">
+      <p>Can't find what you're looking for? Send us an email and we'll get back to you as soon as we can.</p>
+      <a href="mailto:fashionbotstylist@gmail.com" class="contact-btn">fashionbotstylist@gmail.com</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Fashion Bot &nbsp;·&nbsp; <a href="mailto:fashionbotstylist@gmail.com">fashionbotstylist@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
