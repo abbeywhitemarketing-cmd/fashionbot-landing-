@@ -250,7 +250,7 @@
 
     <main class="content">
 
-        <p class="effective-date">Effective date: 1 May 2026</p>
+        <p class="effective-date">Effective date: 2 May 2026</p>
 
         <p class="section-label">Overview</p>
         <p>Fashion Bot is a daily outfit recommendation app. Your preferences stay on your device, nothing is sold to third parties, and no account is required.</p>
@@ -266,6 +266,9 @@
 
         <h2>Shop the Look</h2>
         <p>When you tap a retailer in the Shop the Look feature, Fashion Bot records that a tap occurred — which retailer, which item type, and the date. This is used solely to measure traffic driven to retailers and is not linked to your identity.</p>
+
+        <h2>Usage analytics</h2>
+        <p>Fashion Bot uses PostHog to collect anonymous, aggregated data about how features are used — for example, whether an outfit was loaded from cache or generated fresh, and which features are tapped. This data contains no personal identifiers and cannot be linked back to you. It is used solely to understand how the app is being used and to improve it.</p>
 
         <h2>Push notifications</h2>
         <p>Fashion Bot uses local push notifications for your daily outfit reminder. These are scheduled entirely on your device — no notification data passes through our servers.</p>
@@ -290,6 +293,10 @@
                 <span class="third-party-name">Google OAuth</span>
                 <span class="third-party-purpose">Calendar integration (only if you choose to connect it)</span>
             </div>
+            <div class="third-party-item">
+                <span class="third-party-name">PostHog</span>
+                <span class="third-party-purpose">Anonymous in-app analytics — feature usage events, no personal data</span>
+            </div>
         </div>
 
         <h2>What we don't collect</h2>
@@ -297,7 +304,6 @@
             <li>Your name or email address</li>
             <li>Your precise GPS location</li>
             <li>Device identifiers</li>
-            <li>Browsing or usage analytics</li>
             <li>Any information from your camera or photos</li>
         </ul>
 
