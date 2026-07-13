@@ -259,9 +259,10 @@
         <p>When you set up your style profile, you enter your city (text only — not your GPS location), style preferences, work schedule, and activity notes. This information is stored locally on your device. It is sent to our servers only when generating your daily outfit, and is not stored on our servers after your outfit is generated.</p>
 
         <h2>Google Calendar (optional)</h2>
-        <p>If you choose to connect Google Calendar, Fashion Bot requests access to read your calendar events (<code>calendar.readonly</code> and <code>calendar.events</code> scopes) in order to personalise outfit suggestions — for example, noting a big meeting or a dinner booking.</p>
+        <p>If you choose to connect Google Calendar, Fashion Bot requests read-only access to your calendar events (<code>calendar.readonly</code> scope) in order to personalise outfit suggestions — for example, noting a big meeting or a dinner booking.</p>
         <p>Your calendar data is used solely at the moment your outfit is generated. It is passed to Anthropic (Claude AI) as part of the outfit generation prompt, and is not stored on our servers after your outfit is generated. It is not used for advertising, not sold, and not shared with any other third party.</p>
-        <p>Fashion Bot's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" style="color: var(--terracotta);">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>Anthropic does not use data submitted via its API to train its models. Your calendar data is processed solely to return your outfit recommendation and is not retained by Anthropic.</p>
+        <p><strong>Google API Limited Use:</strong> The use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" style="color: var(--terracotta);">Google API Services User Data Policy</a>, including the Limited Use requirements. Google user data is not used to develop, improve, or train generalised AI or ML models.</p>
         <p>You can disconnect Google Calendar at any time in the app's Settings. Fashion Bot does not create, modify, or delete calendar events.</p>
 
         <h2>Outfit history</h2>
